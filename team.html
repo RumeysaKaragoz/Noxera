@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ekibimiz | NOXERA</title>
+    <link rel="stylesheet" href="team.css" />
+  </head>
+  <body>
+    <header class="nav-bar">
+      <div class="logo">NOXERA</div>
+
+      <nav class="nav-links">
+        <a href="index.html">Anasayfa</a>
+        <a href="team.html">Ekibimiz</a>
+        <!--eklendi ve -->
+        <a href="#">Hizmetler</a>
+        <a href="#">Projeler</a>
+      </nav>
+      <a class="btnpri">Get Started</a>
+    </header>
+    <!--uzman kadro bölümü-->
+    <section class="team">
+      <h1>Uzman Kadromuz</h1>
+      <p class="vizyon">
+        NOXERA, dijital ürünleri yalnızca bugüne değil, geleceğe dayanacak
+        şekilde inşa etmeyi amaçlar. Gürültüden uzak, sağlam temeller üzerine
+        kurulan teknolojilerle; fikirlerin sakin, sürdürülebilir ve anlamlı
+        biçimde büyümesini hedefler.
+      </p>
+      <div class="team-grid">
+        <!--kart1-->
+        <div class="team-card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="foto.jpeg" alt="rk" />
+              <h3>Rümeysa Karagöz</h3>
+              <span>Product Strategist</span>
+            </div>
+            <div class="card-back">
+              <ul class="skill">
+                <li class="skill-tag">Ürün Stratejisi</li>
+                <li class="skill-tag">Stratejik Planlama</li>
+                <li class="skill-tag">İş Analizi</li>
+                <li class="skill-tag">Karar Alma</li>
+                <li class="skill-tag">Vizyon Geliştirme</li>
+              </ul>
+              <div class="certificate">
+                <a href="https://flexfarm-tr.netlify.app/" target="_blank">
+                <img src="certificate.png" alt="FlexFarm Sertifikası" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--kart2-->
+        <div class="team-card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="asira.jpg" alt="asira" />
+              <h3>Asira Juthathep</h3>
+              <span>Frontend Developer</span>
+            </div>
+            <div class="card-back">
+              <ul class="skill">
+                <li class="skill-tag">Frontend Development</li>
+                <li class="skill-tag">UI Implementation</li>
+                <li class="skill-tag">Responsive Design</li>
+                <li class="skill-tag">Web Performance</li>
+                <li class="skill-tag">SEO</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!--kart3-->
+        <div class="team-card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="eloise.webp" alt="elo" />
+              <h3>Eloise Bridgerton</h3>
+              <span>Infrastructure Engineer</span>
+            </div>
+            <div class="card-back">
+              <ul class="skill">
+                <li class="skill-tag">Backend Systems</li>
+                <li class="skill-tag">Infrastructure Management</li>
+                <li class="skill-tag">Server Administration</li>
+                <li class="skill-tag">Security</li>
+                <li class="skill-tag">Automation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!--kar4-->
+        <div class="team-card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="mark.jpg" alt="mark" />
+              <h3>Mark Watson</h3>
+              <span>UI/UX & Brand Designer</span>
+            </div>
+            <div class="card-back">
+              <ul class="skill">
+                <li class="skill-tag">Product Design</li>
+                <li class="skill-tag">UI/UX Design</li>
+                <li class="skill-tag">User Experience</li>
+                <li class="skill-tag">Visual Consistency</li>
+                <li class="skill-tag">Minimal Design</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FOOTER -->
+    <section>
+      <footer class="footer">
+        <p>© 2026 NOXERA. All rights reserved.</p>
+      </footer>
+    </section>
+    <!--Responsive-->
+    <script>
+  document.querySelectorAll(".team-card").forEach(card => {
+    card.addEventListener("click", () => {
+      card.classList.toggle("active");
+    });
+  });
+</script>
+
+  </body>
+</html>
