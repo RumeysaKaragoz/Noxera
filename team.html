@@ -127,13 +127,15 @@
           card.classList.toggle("active");
         });
       });
-    </script>
-    <script>
+
       const menuToggle = document.querySelector(".menu-toggle");
       const navBar = document.querySelector(".nav-bar");
 
       menuToggle.addEventListener("click", () => {
         navBar.classList.toggle("active");
+        document.body.style.overflow = navBar.classList.contains("active")
+          ? "hidden"
+          : "";
       });
     </script>
   </body>
