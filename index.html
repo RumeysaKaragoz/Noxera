@@ -8,6 +8,7 @@
   </head>
   <body>
     <header class="nav-bar">
+      <div class="menu-toggle">☰</div>
       <div class="logo">NOXERA</div>
 
     <nav class="nav-links">
@@ -41,6 +42,15 @@
   <footer class="footer">
     <p>© 2026 NOXERA. All rights reserved.</p>
   </footer>
-  
+  <!--responsive-->
+  <script>
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navBar = document.querySelector(".nav-bar");
+
+  menuToggle.addEventListener("click", () => {
+    navBar.classList.toggle("active");
+  });
+</script>
+
   </body>
 </html>
