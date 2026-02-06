@@ -8,6 +8,7 @@
   </head>
   <body>
     <header class="nav-bar">
+      <div class="menu-toggle">☰</div>
       <div class="logo">NOXERA</div>
 
       <nav class="nav-links">
@@ -47,7 +48,7 @@
               </ul>
               <div class="certificate">
                 <a href="https://flexfarm-tr.netlify.app/" target="_blank">
-                <img src="certificate.png" alt="FlexFarm Sertifikası" />
+                  <img src="certificate.png" alt="FlexFarm Sertifikası" />
                 </a>
               </div>
             </div>
@@ -121,12 +122,19 @@
     </section>
     <!--Responsive-->
     <script>
-  document.querySelectorAll(".team-card").forEach(card => {
-    card.addEventListener("click", () => {
-      card.classList.toggle("active");
-    });
-  });
-</script>
+      document.querySelectorAll(".team-card").forEach((card) => {
+        card.addEventListener("click", () => {
+          card.classList.toggle("active");
+        });
+      });
+    </script>
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navBar = document.querySelector(".nav-bar");
 
+      menuToggle.addEventListener("click", () => {
+        navBar.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>
