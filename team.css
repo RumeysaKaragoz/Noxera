@@ -1,140 +1,361 @@
-<!doctype html>
-<html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ekibimiz | NOXERA</title>
-    <link rel="stylesheet" href="team.css" />
-  </head>
-  <body>
-    <header class="nav-bar">
-      <div class="menu-toggle">☰</div>
-      <div class="logo">NOXERA</div>
+/*Font roboto levba*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
-      <nav class="nav-links">
-        <a href="index.html">Anasayfa</a>
-        <a href="team.html">Ekibimiz</a>
-        <!--eklendi ve -->
-        <a href="#">Hizmetler</a>
-        <a href="#">Projeler</a>
-      </nav>
-      <a class="btnpri">Get Started</a>
-    </header>
-    <!--uzman kadro bölümü-->
-    <section class="team">
-      <h1>Uzman Kadromuz</h1>
-      <p class="vizyon">
-        NOXERA, dijital ürünleri yalnızca bugüne değil, geleceğe dayanacak
-        şekilde inşa etmeyi amaçlar. Gürültüden uzak, sağlam temeller üzerine
-        kurulan teknolojilerle; fikirlerin sakin, sürdürülebilir ve anlamlı
-        biçimde büyümesini hedefler.
-      </p>
-      <div class="team-grid">
-        <!--kart1-->
-        <div class="team-card">
-          <div class="card-inner">
-            <div class="card-front">
-              <img src="foto.jpeg" alt="rk" />
-              <h3>Rümeysa Karagöz</h3>
-              <span>Product Strategist</span>
-            </div>
-            <div class="card-back">
-              <ul class="skill">
-                <li class="skill-tag">Ürün Stratejisi</li>
-                <li class="skill-tag">Stratejik Planlama</li>
-                <li class="skill-tag">İş Analizi</li>
-                <li class="skill-tag">Karar Alma</li>
-                <li class="skill-tag">Vizyon Geliştirme</li>
-              </ul>
-              <div class="certificate">
-                <a href="https://flexfarm-tr.netlify.app/" target="_blank">
-                  <img src="certificate.png" alt="FlexFarm Sertifikası" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--kart2-->
-        <div class="team-card">
-          <div class="card-inner">
-            <div class="card-front">
-              <img src="asira.jpg" alt="asira" />
-              <h3>Asira Juthathep</h3>
-              <span>Frontend Developer</span>
-            </div>
-            <div class="card-back">
-              <ul class="skill">
-                <li class="skill-tag">Frontend Development</li>
-                <li class="skill-tag">UI Implementation</li>
-                <li class="skill-tag">Responsive Design</li>
-                <li class="skill-tag">Web Performance</li>
-                <li class="skill-tag">SEO</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+/*varasayılan reset işlemi*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*body stil ayarları*/
+body {
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
+  overflow-x: hidden;
+}
+/*Nav bar kısmı */
+.nav-bar {
+  display: flex; /* Logo, linkler ve butonu yan yana dizmek için */
+  justify-content: space-between; /* Elemanları iki uca yaymak için */
+  align-items: center;
+  padding: 20px 60px;
+  background: linear-gradient(135deg, #0b0b2b 0%, #090a0d 100%);
+}
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+}
+.logo {
+  font-size: 28px;
+  color: #2d3748;
+  margin-bottom: 8px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.nav-links {
+  display: flex; /* Menü linklerini yatay dizmek için */
+  gap: 30px;
+}
+.nav-links a {
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 20px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  text-decoration: none;
+}
+.nav-links a:hover {
+  border: 1px solid #6c5ce7;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(111, 124, 255, 0.4);
+}
+/*buton get started*/
+.btnpri {
+  text-decoration: none;
+  background: linear-gradient(90deg, #6f7cff, #8f6bff);
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 20px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.btnpri:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(111, 124, 255, 0.4);
+}
 
-        <!--kart3-->
-        <div class="team-card">
-          <div class="card-inner">
-            <div class="card-front">
-              <img src="eloise.webp" alt="elo" />
-              <h3>Eloise Bridgerton</h3>
-              <span>Infrastructure Engineer</span>
-            </div>
-            <div class="card-back">
-              <ul class="skill">
-                <li class="skill-tag">Backend Systems</li>
-                <li class="skill-tag">Infrastructure Management</li>
-                <li class="skill-tag">Server Administration</li>
-                <li class="skill-tag">Security</li>
-                <li class="skill-tag">Automation</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!--kar4-->
-        <div class="team-card">
-          <div class="card-inner">
-            <div class="card-front">
-              <img src="mark.jpg" alt="mark" />
-              <h3>Mark Watson</h3>
-              <span>UI/UX & Brand Designer</span>
-            </div>
-            <div class="card-back">
-              <ul class="skill">
-                <li class="skill-tag">Product Design</li>
-                <li class="skill-tag">UI/UX Design</li>
-                <li class="skill-tag">User Experience</li>
-                <li class="skill-tag">Visual Consistency</li>
-                <li class="skill-tag">Minimal Design</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- FOOTER -->
-    <section>
-      <footer class="footer">
-        <p>© 2026 NOXERA. All rights reserved.</p>
-      </footer>
-    </section>
-    <!--Responsive-->
-    <script>
-      document.querySelectorAll(".team-card").forEach((card) => {
-        card.addEventListener("click", () => {
-          card.classList.toggle("active");
-        });
-      });
-    </script>
-    <script>
-      const menuToggle = document.querySelector(".menu-toggle");
-      const navBar = document.querySelector(".nav-bar");
+/*Uzman kadro kısmı*/
 
-      menuToggle.addEventListener("click", () => {
-        navBar.classList.toggle("active");
-      });
-    </script>
-  </body>
-</html>
+.team {
+  padding: 100px 60px;
+  text-align: center;
+  color: #fff;
+}
+/*vizyon kısmı*/
+.vizyon {
+  max-width: 600px;
+  margin: 20px auto 60px;
+  color: #b7bbd8;
+}
+/*kart conteniar*/
+.team-grid {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Kart kapsayıcı */
+.team-card {
+  width: 260px;
+  height: 380px;
+  perspective: 1000px; /* 3D derinlik */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Kart içi dönüş */
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s ease-in-out;
+  transform-style: preserve-3d;
+}
+/* Mouse gelince kart döner */
+.team-card:hover .card-inner {
+  transform: rotateY(180deg); /* Flip efekti */
+}
+
+/* Ön & arka yüz */
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #2a2f5a, #0b0f1a);
+  padding: 20px;
+  text-align: center;
+}
+.card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* 🔥 */
+  align-items: center;
+  gap: 16px;
+  padding-top: 20px;
+}
+
+/*profil foto*/
+.card-front img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid rgba(111, 124, 255, 0.6);
+  margin: 0 auto 20px auto;
+  display: block;
+  box-shadow:
+    0 0 0 4px rgba(111, 124, 255, 0.15),
+    0 10px 30px rgba(111, 124, 255, 0.35);
+  transition: transform 0.3s ease;
+}
+.team-card:hover .card-front img {
+  transform: scale(1.08); /* Mouse gelince %8 büyür */
+}
+/*personel title*/
+.card-front h3 {
+  margin-top: 10px;
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #f9fafb;
+  text-shadow: 0 0 8px rgba(111, 124, 255, 0.35); /* hafif neon vurgu */
+  letter-spacing: 0.4px;
+}
+.card-front span {
+  position: relative;
+  background: rgba(111, 124, 255, 0.12);
+  padding: 10px 25px;
+  margin-top: 20px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.card-front span::after {
+  content: "";
+  width: 40%;
+  height: 2px;
+  background: linear-gradient(90deg, #6f7cff, transparent);
+  display: block;
+  margin: 6px auto 0;
+  border-radius: 10px;
+}
+
+/* Arka yüz */
+.card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Sertifika  */
+/* Sertifika başlangıçta gizli */
+.certificate {
+  margin-top: 10px;
+  text-align: center;
+  opacity: 1 !important;
+  transform: translateY(20px) scale(0.95);
+  transition: all 0.4s ease;
+}
+
+/* Kart hover olunca sertifika görünür */
+.team-card:hover .certificate {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Sertifika görseli */
+.certificate img {
+  width: 140px;
+  border-radius: 12px;
+  margin-bottom: 6px;
+
+  box-shadow:
+    0 0 20px rgba(111, 124, 255, 0.4),
+    0 10px 30px rgba(0, 0, 0, 0.4);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.certificate img:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 30px rgba(111, 124, 255, 0.6),
+    0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Sertifika yazısı */
+.certificate span {
+  display: block;
+  font-size: 12px;
+  color: #9fa4ff;
+  letter-spacing: 0.8px;
+}
+/*skill kısmı */
+
+.skill {
+  text-align: center;
+  margin: 0 -6px;
+}
+
+.skill-tag {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 8px 16px;
+  color: white;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-block;
+  margin: 6px;
+  letter-spacing: 0.5px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.skill-tag:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 30px rgba(111, 124, 255, 0.6),
+    0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+/*  RESPONSIVE */
+
+@media (max-width: 992px) {
+  .nav-bar {
+    padding: 16px 30px;
+  }
+
+  .team {
+    padding: 80px 30px;
+  }
+
+  .team-grid {
+    gap: 30px;
+  }
+
+  .team-card {
+    width: 240px;
+    height: 380px;
+  }
+}
+
+/*Mobil responsive*/
+@media (max-width: 800px) {
+  /* Navbar */
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-bar {
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    background: linear-gradient(135deg, #0b0b2b, #090a0d);
+    padding: 20px 0;
+    z-index: 999;
+  }
+
+  .nav-bar.active .nav-links {
+    display: flex;
+  }
+
+  .nav-bar > .btnpri {
+    display: none;
+  }
+
+  /* Team alanı */
+  .team {
+    padding: 60px 20px;
+  }
+
+  .team h1 {
+    font-size: 28px;
+  }
+
+  .vizyon {
+    font-size: 14px;
+  }
+
+  /* Kartlar */
+  .team-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-card {
+    width: 90%;
+    max-width: 320px;
+    height: 400px;
+  }
+
+  /* Hover yerine tıklama hissi */
+  .team-card:hover .card-inner {
+    transform: none;
+  }
+
+  .team-card.active .card-inner {
+    transform: rotateY(180deg);
+  }
+}
