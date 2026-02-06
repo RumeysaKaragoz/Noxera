@@ -129,7 +129,7 @@ body {
   transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* 🔥 */
+  justify-content: flex-start; 
   align-items: center;
   gap: 16px;
   padding-top: 20px;
