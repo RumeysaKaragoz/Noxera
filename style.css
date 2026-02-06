@@ -1,18 +1,18 @@
 /*Font roboto levba*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 /*varasayılan reset işlemi*/
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
+/*body stil ayarları*/
 body {
-    min-height: 100vh;
-    font-family: "Roboto" , sans-serif;   
-    background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
-    overflow-x: hidden;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
+  overflow-x: hidden;
 }
 /*Arka plan yıldız kısmı*/
 .stars {
@@ -20,18 +20,43 @@ body {
   height: 1px;
   position: absolute;
   background: white;
-  box-shadow: 2vw 5vh 2px white, 10vw 8vh 2px white, 15vw 15vh 1px white,
-    22vw 22vh 1px white, 28vw 12vh 2px white, 32vw 32vh 1px white,
-    38vw 18vh 2px white, 42vw 35vh 1px white, 48vw 25vh 2px white,
-    53vw 42vh 1px white, 58vw 15vh 2px white, 63vw 38vh 1px white,
-    68vw 28vh 2px white, 73vw 45vh 1px white, 78vw 32vh 2px white,
-    83vw 48vh 1px white, 88vw 20vh 2px white, 93vw 52vh 1px white,
-    98vw 35vh 2px white, 5vw 60vh 1px white, 12vw 65vh 2px white,
-    18vw 72vh 1px white, 25vw 78vh 2px white, 30vw 85vh 1px white,
-    35vw 68vh 2px white, 40vw 82vh 1px white, 45vw 92vh 2px white,
-    50vw 75vh 1px white, 55vw 88vh 2px white, 60vw 95vh 1px white,
-    65vw 72vh 2px white, 70vw 85vh 1px white, 75vw 78vh 2px white,
-    80vw 92vh 1px white, 85vw 82vh 2px white, 90vw 88vh 1px white,
+  box-shadow:
+    2vw 5vh 2px white,
+    10vw 8vh 2px white,
+    15vw 15vh 1px white,
+    22vw 22vh 1px white,
+    28vw 12vh 2px white,
+    32vw 32vh 1px white,
+    38vw 18vh 2px white,
+    42vw 35vh 1px white,
+    48vw 25vh 2px white,
+    53vw 42vh 1px white,
+    58vw 15vh 2px white,
+    63vw 38vh 1px white,
+    68vw 28vh 2px white,
+    73vw 45vh 1px white,
+    78vw 32vh 2px white,
+    83vw 48vh 1px white,
+    88vw 20vh 2px white,
+    93vw 52vh 1px white,
+    98vw 35vh 2px white,
+    5vw 60vh 1px white,
+    12vw 65vh 2px white,
+    18vw 72vh 1px white,
+    25vw 78vh 2px white,
+    30vw 85vh 1px white,
+    35vw 68vh 2px white,
+    40vw 82vh 1px white,
+    45vw 92vh 2px white,
+    50vw 75vh 1px white,
+    55vw 88vh 2px white,
+    60vw 95vh 1px white,
+    65vw 72vh 2px white,
+    70vw 85vh 1px white,
+    75vw 78vh 2px white,
+    80vw 92vh 1px white,
+    85vw 82vh 2px white,
+    90vw 88vh 1px white,
     95vw 75vh 2px white;
   animation: twinkle 8s infinite linear;
 }
@@ -90,126 +115,139 @@ body {
   width: 1px;
   height: 1px;
   background: white;
-  box-shadow: 8vw 12vh 2px white, 16vw 18vh 1px white, 24vw 25vh 2px white,
-    33vw 15vh 1px white, 41vw 28vh 2px white, 49vw 35vh 1px white,
-    57vw 22vh 2px white, 65vw 42vh 1px white, 73vw 28vh 2px white,
-    81vw 48vh 1px white, 89vw 32vh 2px white, 97vw 45vh 1px white,
-    3vw 68vh 2px white, 11vw 75vh 1px white, 19vw 82vh 2px white,
-    27vw 88vh 1px white, 35vw 72vh 2px white, 43vw 85vh 1px white,
-    51vw 92vh 2px white, 59vw 78vh 1px white;
+  box-shadow:
+    8vw 12vh 2px white,
+    16vw 18vh 1px white,
+    24vw 25vh 2px white,
+    33vw 15vh 1px white,
+    41vw 28vh 2px white,
+    49vw 35vh 1px white,
+    57vw 22vh 2px white,
+    65vw 42vh 1px white,
+    73vw 28vh 2px white,
+    81vw 48vh 1px white,
+    89vw 32vh 2px white,
+    97vw 45vh 1px white,
+    3vw 68vh 2px white,
+    11vw 75vh 1px white,
+    19vw 82vh 2px white,
+    27vw 88vh 1px white,
+    35vw 72vh 2px white,
+    43vw 85vh 1px white,
+    51vw 92vh 2px white,
+    59vw 78vh 1px white;
   animation: twinkle 6s infinite linear reverse;
 }
 
-
 /*header kısmı*/
-.logo{
- font-size: 28px;
-    color: #2d3748;
-    margin-bottom: 8px;
-    font-weight: 700;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    background-clip: text ;
-    -webkit-text-fill-color:transparent;
-}
-
 .nav-bar {
   display: flex; /* Logo, linkler ve butonu yan yana dizmek için */
   justify-content: space-between; /* Elemanları iki uca yaymak için */
   align-items: center;
   padding: 20px 60px;
+  background:linear-gradient(135deg, #0b0b2b 0%, #090a0d 100%);
+}
+.logo {
+  font-size: 28px;
+  color: #2d3748;
+  margin-bottom: 8px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .nav-links {
   display: flex; /* Menü linklerini yatay dizmek için */
   gap: 30px;
 }
 .nav-links a {
-border:1px solid #6c5ce7;
-color: #fff;
-padding: 14px 32px;
-border-radius:20px ;
-transition: transform 0.2s ease, box-shadow 0.2s ease;
-text-decoration: none;
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 20px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  text-decoration: none;
 }
-.nav-links a:hover{
+.nav-links a:hover {
+  border: 1px solid #6c5ce7;
   transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(111, 124, 255, 0.4);
+  box-shadow: 0 10px 30px rgba(111, 124, 255, 0.4);
 }
 /*hero kısmı*/
 .hero {
-    min-height: 100vh;
-    display: flex;
-    color: #fff;
-    padding: 80 60px;
-    gap: 50px;
+  min-height: 100vh;
+  display: flex;
+  color: #fff;
+  padding: 80 60px;
+  gap: 50px;
 }
 .hero-content {
-
- display: flex;
-flex-direction: column; 
-justify-content: center;
-align-items: center;
-text-align: center;
-border-bottom-right-radius: 20px;
-flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom-right-radius: 20px;
+  flex: 1.2;
   padding: 120px 80px;
   color: #fff;
 
   position: relative;
-  background: linear-gradient(
-    135deg,
-    #2a2f5a 0%,
-    #1b1f3f 50%,
-    #0b0f1a 100%
-  );
+  background: linear-gradient(135deg, #2a2f5a 0%, #1b1f3f 50%, #0b0f1a 100%);
 }
 
 .hero h1 {
- color: #f9fafb;
- font-size: 3rem;
- font-weight: 700;
- line-height: 1.2;
- margin-bottom: 20px;
+  color: #f9fafb;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
 }
 
 .hero p {
- max-width: 600px;
- font-size: 1.1rem;
- color: #b7bbd8;
- margin-bottom: 35px;
+  max-width: 600px;
+  font-size: 1.1rem;
+  color: #b7bbd8;
+  margin-bottom: 35px;
 }
 
 .hero-buttons {
- display: flex;
- gap: 20px;
-padding: 14px 32px;
- border-radius: 30px;
- font-weight: 600;
- transition: all 0.3s ease;
+  display: flex;
+  gap: 20px;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 .btnpri {
-text-decoration: none;
-background: linear-gradient(90deg, #6f7cff, #8f6bff);
-color: #fff;
-padding: 14px 32px;
-border-radius:20px ;
-transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  background: linear-gradient(90deg, #6f7cff, #8f6bff);
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 20px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
-.btnpri:hover{
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(111, 124, 255, 0.4);
+.btnpri:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(111, 124, 255, 0.4);
 }
 .btnsec {
-text-decoration: none ;
-border:1px solid #6c5ce7;
-color: #fff;
-padding: 14px 32px;
-border-radius:20px ;
-transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  border: 1px solid #6c5ce7;
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 20px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
-.btnsec:hover{
- transform: translateY(-2px);
- box-shadow: 0 10px 30px rgba(111, 124, 255, 0.4);
+.btnsec:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(111, 124, 255, 0.4);
 }
 /* FOOTER */
 .footer {
@@ -218,9 +256,8 @@ transition: transform 0.2s ease, box-shadow 0.2s ease;
   font-size: 14px;
 }
 
-/* 📱 RESPONSIVE */
+/*  RESPONSIVE */
 @media (max-width: 900px) {
-
   .hero {
     flex-direction: column; /* Mobilde görsel üstte yazı altta */
   }
@@ -231,7 +268,6 @@ transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 @media (max-width: 600px) {
-
   .nav-bar {
     flex-direction: column;
     gap: 20px;
@@ -264,9 +300,7 @@ transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
 }
 
-
 @media (max-width: 900px) {
-
   .hero {
     flex-direction: column;
     gap: 0;
@@ -291,4 +325,3 @@ transition: transform 0.2s ease, box-shadow 0.2s ease;
     display: none;
   }
 }
-
