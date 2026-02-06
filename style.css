@@ -14,138 +14,13 @@ body {
   background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
   overflow-x: hidden;
 }
-/*Arka plan yıldız kısmı*/
-.stars {
-  width: 1px;
-  height: 1px;
-  position: absolute;
-  background: white;
-  box-shadow:
-    2vw 5vh 2px white,
-    10vw 8vh 2px white,
-    15vw 15vh 1px white,
-    22vw 22vh 1px white,
-    28vw 12vh 2px white,
-    32vw 32vh 1px white,
-    38vw 18vh 2px white,
-    42vw 35vh 1px white,
-    48vw 25vh 2px white,
-    53vw 42vh 1px white,
-    58vw 15vh 2px white,
-    63vw 38vh 1px white,
-    68vw 28vh 2px white,
-    73vw 45vh 1px white,
-    78vw 32vh 2px white,
-    83vw 48vh 1px white,
-    88vw 20vh 2px white,
-    93vw 52vh 1px white,
-    98vw 35vh 2px white,
-    5vw 60vh 1px white,
-    12vw 65vh 2px white,
-    18vw 72vh 1px white,
-    25vw 78vh 2px white,
-    30vw 85vh 1px white,
-    35vw 68vh 2px white,
-    40vw 82vh 1px white,
-    45vw 92vh 2px white,
-    50vw 75vh 1px white,
-    55vw 88vh 2px white,
-    60vw 95vh 1px white,
-    65vw 72vh 2px white,
-    70vw 85vh 1px white,
-    75vw 78vh 2px white,
-    80vw 92vh 1px white,
-    85vw 82vh 2px white,
-    90vw 88vh 1px white,
-    95vw 75vh 2px white;
-  animation: twinkle 8s infinite linear;
-}
-
-.shooting-star {
-  position: absolute;
-  width: 100px;
-  height: 2px;
-  background: linear-gradient(90deg, white, transparent);
-  animation: shoot 3s infinite ease-in;
-}
-
-.shooting-star:nth-child(1) {
-  top: 20%;
-  left: -100px;
-  animation-delay: 0s;
-}
-
-.shooting-star:nth-child(2) {
-  top: 35%;
-  left: -100px;
-  animation-delay: 1s;
-}
-
-.shooting-star:nth-child(3) {
-  top: 50%;
-  left: -100px;
-  animation-delay: 2s;
-}
-
-@keyframes twinkle {
-  0%,
-  100% {
-    opacity: 0.8;
-  }
-  50% {
-    opacity: 0.4;
-  }
-}
-
-@keyframes shoot {
-  0% {
-    transform: translateX(0) translateY(0) rotate(25deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(120vw) translateY(50vh) rotate(25deg);
-    opacity: 0;
-  }
-}
-
-/* Additional twinkling stars with different animation timing */
-.stars::after {
-  content: "";
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  background: white;
-  box-shadow:
-    8vw 12vh 2px white,
-    16vw 18vh 1px white,
-    24vw 25vh 2px white,
-    33vw 15vh 1px white,
-    41vw 28vh 2px white,
-    49vw 35vh 1px white,
-    57vw 22vh 2px white,
-    65vw 42vh 1px white,
-    73vw 28vh 2px white,
-    81vw 48vh 1px white,
-    89vw 32vh 2px white,
-    97vw 45vh 1px white,
-    3vw 68vh 2px white,
-    11vw 75vh 1px white,
-    19vw 82vh 2px white,
-    27vw 88vh 1px white,
-    35vw 72vh 2px white,
-    43vw 85vh 1px white,
-    51vw 92vh 2px white,
-    59vw 78vh 1px white;
-  animation: twinkle 6s infinite linear reverse;
-}
-
-/*header kısmı*/
+/*Nav bar kısmı */
 .nav-bar {
   display: flex; /* Logo, linkler ve butonu yan yana dizmek için */
   justify-content: space-between; /* Elemanları iki uca yaymak için */
   align-items: center;
   padding: 20px 60px;
-  background:linear-gradient(135deg, #0b0b2b 0%, #090a0d 100%);
+  background: linear-gradient(135deg, #0b0b2b 0%, #090a0d 100%);
 }
 .logo {
   font-size: 28px;
@@ -174,53 +49,7 @@ body {
   transform: translateY(-2px);
   box-shadow: 0 10px 30px rgba(111, 124, 255, 0.4);
 }
-/*hero kısmı*/
-.hero {
-  min-height: 100vh;
-  display: flex;
-  color: #fff;
-  padding: 80 60px;
-  gap: 50px;
-}
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border-bottom-right-radius: 20px;
-  flex: 1.2;
-  padding: 120px 80px;
-  color: #fff;
-
-  position: relative;
-  background: linear-gradient(135deg, #2a2f5a 0%, #1b1f3f 50%, #0b0f1a 100%);
-}
-
-.hero h1 {
-  color: #f9fafb;
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  max-width: 600px;
-  font-size: 1.1rem;
-  color: #b7bbd8;
-  margin-bottom: 35px;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 20px;
-  padding: 14px 32px;
-  border-radius: 30px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
+/*buton get started*/
 .btnpri {
   text-decoration: none;
   background: linear-gradient(90deg, #6f7cff, #8f6bff);
@@ -235,93 +64,269 @@ body {
   transform: translateY(-2px);
   box-shadow: 0 10px 30px rgba(111, 124, 255, 0.4);
 }
-.btnsec {
-  text-decoration: none;
-  border: 1px solid #6c5ce7;
+
+/*Uzman kadro kısmı*/
+
+.team {
+  padding: 100px 60px;
+  text-align: center;
   color: #fff;
-  padding: 14px 32px;
+}
+/*vizyon kısmı*/
+.vizyon {
+  max-width: 600px;
+  margin: 20px auto 60px;
+  color: #b7bbd8;
+}
+/*kart conteniar*/
+.team-grid {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Kart kapsayıcı */
+.team-card {
+  width: 260px;
+  height: 380px;
+  perspective: 1000px; /* 3D derinlik */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Kart içi dönüş */
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s ease-in-out;
+  transform-style: preserve-3d;
+}
+/* Mouse gelince kart döner */
+.team-card:hover .card-inner {
+  transform: rotateY(180deg); /* Flip efekti */
+}
+
+/* Ön & arka yüz */
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
   border-radius: 20px;
+  background: linear-gradient(135deg, #2a2f5a, #0b0f1a);
+  padding: 20px;
+  text-align: center;
+}
+.card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* 🔥 */
+  align-items: center;
+  gap: 16px;
+  padding-top: 20px;
+}
+
+/*profil foto*/
+.card-front img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid rgba(111, 124, 255, 0.6);
+  margin: 0 auto 20px auto;
+  display: block;
+  box-shadow:
+    0 0 0 4px rgba(111, 124, 255, 0.15),
+    0 10px 30px rgba(111, 124, 255, 0.35);
+  transition: transform 0.3s ease;
+}
+.team-card:hover .card-front img {
+  transform: scale(1.08); /* Mouse gelince %8 büyür */
+}
+/*personel title*/
+.card-front h3 {
+  margin-top: 10px;
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #f9fafb;
+  text-shadow: 0 0 8px rgba(111, 124, 255, 0.35); /* hafif neon vurgu */
+  letter-spacing: 0.4px;
+}
+.card-front span {
+  position: relative;
+  background: rgba(111, 124, 255, 0.12);
+  padding: 10px 25px;
+  margin-top: 20px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.card-front span::after {
+  content: "";
+  width: 40%;
+  height: 2px;
+  background: linear-gradient(90deg, #6f7cff, transparent);
+  display: block;
+  margin: 6px auto 0;
+  border-radius: 10px;
+}
+
+/* Arka yüz */
+.card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Sertifika  */
+/* Sertifika başlangıçta gizli */
+.certificate {
+  margin-top: 10px;
+  text-align: center;
+  opacity: 1 !important;
+  transform: translateY(20px) scale(0.95);
+  transition: all 0.4s ease;
+}
+
+/* Kart hover olunca sertifika görünür */
+.team-card:hover .certificate {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Sertifika görseli */
+.certificate img {
+  width: 140px;
+  border-radius: 12px;
+  margin-bottom: 6px;
+
+  box-shadow:
+    0 0 20px rgba(111, 124, 255, 0.4),
+    0 10px 30px rgba(0, 0, 0, 0.4);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.certificate img:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 30px rgba(111, 124, 255, 0.6),
+    0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Sertifika yazısı */
+.certificate span {
+  display: block;
+  font-size: 12px;
+  color: #9fa4ff;
+  letter-spacing: 0.8px;
+}
+/*skill kısmı */
+
+.skill {
+  text-align: center;
+  margin: 0 -6px;
+}
+
+.skill-tag {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 8px 16px;
+  color: white;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-block;
+  margin: 6px;
+  letter-spacing: 0.5px;
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
 }
-.btnsec:hover {
+
+.skill-tag:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(111, 124, 255, 0.4);
+  box-shadow:
+    0 0 30px rgba(111, 124, 255, 0.6),
+    0 15px 40px rgba(0, 0, 0, 0.5);
 }
+
 /* FOOTER */
 .footer {
   text-align: center;
   padding: 20px;
   font-size: 14px;
 }
-
 /*  RESPONSIVE */
-@media (max-width: 900px) {
-  .hero {
-    flex-direction: column; /* Mobilde görsel üstte yazı altta */
+
+@media (max-width: 992px) {
+  .nav-bar {
+    padding: 16px 30px;
   }
 
-  .service-grid {
-    grid-template-columns: repeat(2, 1fr); /* Tablet görünümünde 2 sütun */
+  .team {
+    padding: 80px 30px;
+  }
+
+  .team-grid {
+    gap: 30px;
+  }
+
+  .team-card {
+    width: 240px;
+    height: 380px;
   }
 }
 
-@media (max-width: 600px) {
+/*Mobil responsive*/
+@media (max-width: 768px) {
+  /* Navbar */
   .nav-bar {
     flex-direction: column;
-    gap: 20px;
-    padding: 20px;
+    gap: 16px;
   }
 
   .nav-links {
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
   }
 
-  .hero-content {
+  /* Team alanı */
+  .team {
     padding: 60px 20px;
   }
 
-  .hero h1 {
-    font-size: 1.8rem;
+  .team h1 {
+    font-size: 28px;
   }
 
-  .hero-buttons {
+  .vizyon {
+    font-size: 14px;
+  }
+
+  /* Kartlar */
+  .team-grid {
     flex-direction: column;
-    width: 100%;
+    align-items: center;
   }
 
-  .btnpri,
-  .btnsec {
-    width: 100%;
-    text-align: center;
-  }
-}
-
-@media (max-width: 900px) {
-  .hero {
-    flex-direction: column;
-    gap: 0;
+  .team-card {
+    width: 90%;
+    max-width: 320px;
+    height: 400px;
   }
 
-  .hero-content {
-    padding: 80px 40px;
-    border-radius: 0;
+  /* Hover yerine tıklama hissi */
+  .team-card:hover .card-inner {
+    transform: none;
   }
 
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .shooting-star {
-    display: none;
+  .team-card.active .card-inner {
+    transform: rotateY(180deg);
   }
 }
