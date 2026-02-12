@@ -1,19 +1,17 @@
 /*Font roboto levba*/
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-
-/*varasayılan reset işlemi*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"); /*varasayılan reset işlemi*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} 
 /*body stil ayarları*/
 body {
   min-height: 100vh;
   font-family: "Roboto", sans-serif;
   background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
   overflow-x: hidden;
-}
+} 
 /*Arka plan yıldız kısmı*/
 .stars {
   width: 1px;
@@ -60,7 +58,6 @@ body {
     95vw 75vh 2px white;
   animation: twinkle 8s infinite linear;
 }
-
 .shooting-star {
   position: absolute;
   width: 100px;
@@ -68,25 +65,21 @@ body {
   background: linear-gradient(90deg, white, transparent);
   animation: shoot 3s infinite ease-in;
 }
-
 .shooting-star:nth-child(1) {
   top: 20%;
   left: -100px;
   animation-delay: 0s;
 }
-
 .shooting-star:nth-child(2) {
   top: 35%;
   left: -100px;
   animation-delay: 1s;
 }
-
 .shooting-star:nth-child(3) {
   top: 50%;
   left: -100px;
   animation-delay: 2s;
 }
-
 @keyframes twinkle {
   0%,
   100% {
@@ -96,7 +89,6 @@ body {
     opacity: 0.4;
   }
 }
-
 @keyframes shoot {
   0% {
     transform: translateX(0) translateY(0) rotate(25deg);
@@ -106,8 +98,7 @@ body {
     transform: translateX(120vw) translateY(50vh) rotate(25deg);
     opacity: 0;
   }
-}
-
+} 
 /* Additional twinkling stars with different animation timing */
 .stars::after {
   content: "";
@@ -141,16 +132,15 @@ body {
 .stars,
 .shooting-star {
   pointer-events: none;
-}
-
+} 
 
 /*header kısmı*/
 .nav-bar {
-  display: flex; /* Logo, linkler ve butonu yan yana dizmek için */
-  justify-content: space-between; /* Elemanları iki uca yaymak için */
+  display: flex; 
+  justify-content: space-between; 
   align-items: center;
   padding: 20px 60px;
-  background:linear-gradient(135deg, #0b0b2b 0%, #090a0d 100%);
+  background: linear-gradient(135deg, #0b0b2b 0%, #090a0d 100%);
 }
 .menu-toggle {
   display: none;
@@ -168,7 +158,7 @@ body {
   -webkit-text-fill-color: transparent;
 }
 .nav-links {
-  display: flex; /* Menü linklerini yatay dizmek için */
+  display: flex; 
   gap: 30px;
 }
 .nav-links a {
@@ -184,7 +174,8 @@ body {
   border: 1px solid #6c5ce7;
   transform: translateY(-2px);
   box-shadow: 0 10px 30px rgba(111, 124, 255, 0.4);
-}
+} 
+
 /*hero kısmı*/
 .hero {
   min-height: 100vh;
@@ -203,11 +194,9 @@ body {
   flex: 1.2;
   padding: 120px 80px;
   color: #fff;
-
   position: relative;
-  background: linear-gradient(135deg, #2a2f5a 0%, #1b1f3f 50%, #0b0f1a 100%);
+  background: transparent;
 }
-
 .hero h1 {
   color: #f9fafb;
   font-size: 3rem;
@@ -215,14 +204,12 @@ body {
   line-height: 1.2;
   margin-bottom: 20px;
 }
-
 .hero p {
   max-width: 600px;
   font-size: 1.1rem;
   color: #b7bbd8;
   margin-bottom: 35px;
 }
-
 .hero-buttons {
   display: flex;
   gap: 20px;
@@ -231,7 +218,6 @@ body {
   font-weight: 600;
   transition: all 0.3s ease;
 }
-
 .btnpri {
   text-decoration: none;
   background: linear-gradient(90deg, #6f7cff, #8f6bff);
@@ -259,111 +245,242 @@ body {
 .btnsec:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 30px rgba(111, 124, 255, 0.4);
+} 
+
+/*hizmetler bölümü */
+.services * {
+  position: relative;
+  z-index: 2;
 }
+
+.servis {
+  padding: 120px 8%;
+  position: relative;
+  background: linear-gradient(
+  to bottom,
+  rgba(255, 210, 170, 0) 0%,
+  rgba(255, 190, 140, 0.25) 20%,
+  rgba(255, 150, 110, 0.55) 40%,
+  rgba(220, 110, 150, 0.75) 60%,
+  rgba(120, 90, 180, 0.9) 80%,
+  rgba(40, 50, 120, 1) 100%
+);
+}
+/*baslık*/
+.servis-title{
+  max-width: 720px;
+  margin: 0 auto 80px;
+  text-align: center;
+  position: relative;
+}
+.servis-title::after {
+   content: "";
+  display: block;
+  width: 80px;
+  height: 2px;
+  margin: 5px auto 0;
+  background: linear-gradient(90deg, #6f7cff, #8f6bff);
+  border-radius: 2px;
+}
+.title {
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #f9fafb;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #ffffff, #c7d2fe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hizmetler {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.hizmet {
+  flex: 1 1 calc(33.333% - 32px);
+  min-width: 280px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 40px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+   box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.hizmet:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 210, 170, 0.5);
+}
+
+.hizmet h3 {
+  font-weight: 500;
+  font-size: 1.25rem;
+  letter-spacing: 0.2px;
+  margin-bottom: 16px;
+  color: #ffffff;
+  opacity: 0.95;
+}
+
+.hizmet ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hizmet ul li {
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.6;
+  opacity: 0.85;
+
+}
+
+.hizmet ul li::before {
+  content: "•";
+  margin-right: 8px;
+  color: rgba(255,255,255,0.4);
+}
+
+
+.teklif {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.not {
+  font-size: 1.25rem;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 40px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-shadow: 0 3px 12px rgba(0,0,0,0.7);
+
+}
+
+.teklif-btn {
+  display: inline-block;
+  padding: 14px 40px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 210, 170, 0.6);
+  background: transparent;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.teklif-btn:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  background: rgba(255, 210, 170, 0.2);
+  border-color: rgba(255, 210, 170, 1);
+  transform: translateY(-3px);
+}
+
+ 
 /* FOOTER */
 .footer {
   text-align: center;
   padding: 20px;
   font-size: 14px;
-}
-
-/*  RESPONSIVE */
+} 
+/* RESPONSIVE */
 @media (max-width: 900px) {
   .hero {
-    flex-direction: column; /* Mobilde görsel üstte yazı altta */
+    flex-direction: column; 
   }
-
   .service-grid {
-    grid-template-columns: repeat(2, 1fr); /* Tablet görünümünde 2 sütun */
+    grid-template-columns: repeat(2, 1fr); 
   }
 }
-
 @media (max-width: 600px) {
   .nav-bar {
     flex-direction: column;
     gap: 20px;
     padding: 20px;
   }
-
   .nav-links {
     flex-direction: column;
     width: 100%;
     align-items: center;
   }
-
   .hero-content {
     padding: 60px 20px;
   }
-
   .hero h1 {
     font-size: 1.8rem;
   }
-
   .hero-buttons {
     flex-direction: column;
     width: 100%;
   }
-
   .btnpri,
   .btnsec {
     width: 100%;
     text-align: center;
   }
 }
-
 @media (max-width: 900px) {
   .hero {
     flex-direction: column;
     gap: 0;
   }
-
   .hero-content {
     padding: 80px 40px;
     border-radius: 0;
   }
-
   .hero h1 {
     font-size: 2.2rem;
   }
-
   .hero p {
     font-size: 1rem;
   }
 }
-
 @media (max-width: 800px) {
   .menu-toggle {
     display: block;
   }
-
   .nav-bar {
     position: relative;
     flex-direction: row;
     justify-content: space-between;
     padding: 20px;
   }
-
   .nav-links {
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-
     display: none;
     flex-direction: column;
     align-items: center;
-
     background: linear-gradient(135deg, #0b0b2b, #090a0d);
     padding: 20px 0;
     z-index: 999;
   }
-
   .nav-bar.active .nav-links {
     display: flex;
   }
-
   .nav-bar > .btnpri {
     display: none;
   }
 }
-
