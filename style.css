@@ -227,7 +227,17 @@ body {
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
+animation: glowPulse 5s ease-in-out infinite;
 }
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(111,124,255,0.25);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(143,107,255,0.5);
+  }
+}
+
 .btnpri:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 30px rgba(111, 124, 255, 0.4);
@@ -393,7 +403,6 @@ body {
     inset 0 1px 0 rgba(255, 255, 255, 0.12);
   background: rgba(255, 210, 170, 0.2);
   border-color: rgba(255, 210, 170, 1);
-  transform: translateY(-3px);
 }
 
  
