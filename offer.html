@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teklif Al | NOXERA</title>
+    <link rel="icon" href="image/logo.png">
+    <link rel="stylesheet" href="offer.css" />
+  </head>
+  <body>
+    <main>
+      <section class="group">
+        <section class="main-title">
+          <h2 class="title">Hızlı Teklif Al</h2>
+          <span class="not"
+            >İhtiyacınıza uygun web çözümünü hemen hesaplayın.</span
+          >
+        </section>
+        <!--hızlı paketler-->
+        <div class="budget">
+          <h2>Bütçeniz</h2>
+          <div class="budget-con">
+            <div class="budget-type">
+              <h3>₺5K+</h3>
+              <span>Basit web siteleri için temel paket</span>
+            </div>
+            <div class="budget-type">
+              <h3>₺25K+</h3>
+              <span>Kurumsal web siteleri için standart paket</span>
+            </div>
+            <div class="budget-type">
+              <h3>₺50K+</h3>
+              <span>Gelişmiş çözümler için premium paket</span>
+            </div>
+          </div>
+        </div>
+        <!--hesap alanı-->
+        <section class="offer">
+          <form>
+            <!--comboBox web site türü seçimi-->
+            <div class="calculation">
+              <label for="site-type">Web Site Türü</label>
+              <select id="site-type">
+                <option value="onepage">Onepage Site</option>
+                <option value="eticaret">E-Ticaret Sitesi</option>
+                <option value="kurumsal">Kurumsal Web Site</option>
+                <option value="portfoy">Portföy Site</option>
+                <option value="haber">Haber Sitesi</option>
+                <option value="ilan">İlan Sitesi</option>
+              </select>
+            </div>
+            <!--sayfa sayısı-->
+            <div class="calculation">
+              <label for="page">Sayfa Sayısı</label>
+              <input type="number" id="page-counter" min="1" value="1" />
+            </div>
+
+            <!--Diğer ek hizmetler-->
+            <div class="calculate">
+              <label>
+                <input type="checkbox" id="seo" />
+                SEO Hizmeti
+              </label>
+              <label>
+                <input type="checkbox" id="support" />
+                Bakım ve Destek
+              </label>
+            </div>
+            <div>
+              <button id="calculateBtn">Teklifi Hesapla</button>
+            </div>
+          </form>
+
+          <!--hesabın yazılacağı kısım-->
+          <div class="offer-result" id="offerResult"></div>
+        </section>
+
+        <!--anasayfa veya iletişim sayfasına git -->
+        <div class="page-buttons">
+          <a href="index.html" class="ana-btn">Ana Sayfaya Git</a>
+          <a href="communication.html" class="ilet-btn">İletişime Geç →</a>
+        </div>
+      </section>
+    </main>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>© 2026 NOXERA. All rights reserved.</p>
+    </footer>
+    <!-- JavaScript-->
+    <script src="offer.js"></script>
+  </body>
+</html>
