@@ -11,19 +11,22 @@
       <div class="menu-toggle">☰</div>
       <div class="logo">NOXERA</div>
 
-    <nav class="nav-links">
-      <a href="#">Anasayfa</a>
-      <a href="team.html">Ekibimiz</a> <!--eklendi ve -->
-      <a href="#">Hizmetler</a>
-      <a href="#">Projeler</a>
-    </nav>
-    <a class="btnpri">Get Started</a>
+      <nav class="nav-links">
+        <a href="#">Anasayfa</a>
+        <a href="team.html">Ekibimiz</a>
+        <!--eklendi ve -->
+        <a href="#servis">Hizmetler</a>
+        <a href="#">Projeler</a>
+      </nav>
+      <a class="btnpri">Get Started</a>
     </header>
-      <!-- HERO -->
+    <!-- HERO -->
     <section class="hero">
       <div class="hero-content">
         <h1>Built in the Shadows.<br />Designed for Digital Products.</h1>
-        <p>Dijital ürünler, güçlü altyapı ve sürdürülebilir çözümler — NOXERA.</p>
+        <p>
+          Dijital ürünler, güçlü altyapı ve sürdürülebilir çözümler — NOXERA.
+        </p>
 
         <div class="hero-buttons">
           <a href="#" class="btnpri">Projeni Başlat</a>
@@ -38,19 +41,83 @@
       <div class="shooting-star"></div>
       <div class="shooting-star"></div>
     </section>
-      <!-- FOOTER -->
-  <footer class="footer">
-    <p>© 2026 NOXERA. All rights reserved.</p>
-  </footer>
-  <!--responsive-->
-  <script>
-  const menuToggle = document.querySelector(".menu-toggle");
-  const navBar = document.querySelector(".nav-bar");
 
-  menuToggle.addEventListener("click", () => {
-    navBar.classList.toggle("active");
-  });
-</script>
+    <!--Hizmetler bölümü-->
+    <section class="servis"> 
+      <div class="servis-title">
+         <h2 class="title">Hizmetlerimiz</h2>
+      </div>        
+      
+      <div class="hizmetler">
+        <div class="hizmet">
+          <h3>Web Site Kurulum & Yönetim</h3>
+          <ul>
+            <li>Tek sayfa veya çok sayfalı web sitesi kurulumu</li>
+            <li>Panel üzerinden site yönetimi</li>
+            <li>Başlangıç, Profesyonel ve Kurumsal paketlere uyumlu yapı</li>
+          </ul>
+        </div>
+        <div class="hizmet">
+          <h3>Hosting & SSD Depolama Hizmeti</h3>
+          <ul>
+            <li>Yüksek hızlı SSD altyapı</li>
+            <li>Trafik ve performans odaklı yapı</li>
+            <li>İhtiyaca göre alan genişletme</li>
+          </ul>
+        </div>
+        <div class="hizmet">
+          <h3>Alan Adı (Domain) & Yayınlama</h3>
+          <ul>
+            <li>.com domain yönlendirme</li>
+            <li>DNS ayarları</li>
+            <li>SSL yapılandırması</li>
+          </ul>
+        </div>
+        <div class="hizmet">
+          <h3>Destek & Teknik Danışmanlık</h3>
+          <ul>
+            <li>E-posta ve canlı destek</li>
+            <li>Teknik sorun çözümü</li>
+            <li>Yayın sonrası bakım</li>
+          </ul>
+        </div>
+        <div class="hizmet">
+          <h3>Yedekleme & Güvenlik</h3>
+          <ul>
+            <li>Haftalık / günlük yedekleme</li>
+            <li>Veri güvenliği</li>
+            <li>Olası veri kaybına karşı koruma</li>
+          </ul>
+        </div>
+        <div class="hizmet">
+          <h3>SEO & Performans Analizi</h3>
+          <ul>
+            <li>Site içi SEO analizi</li>
+            <li>Sayfa hızı ve performans raporu</li>
+            <li>Arama motoru uyumluluğu</li>
+          </ul>
+        </div>
+      </div>
+      <div class="teklif">
+        <p class="not">
+          “İhtiyacınıza uygun paketi ve ek hizmetleri saniyeler içinde
+          hesaplayın.”
+        </p>
+      <a href="offer.html" class="teklif-btn">Hızlı Teklif Al</a>
+      </div>
+    </section>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>© 2026 NOXERA. All rights reserved.</p>
+    </footer>
+    <!--responsive-->
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navBar = document.querySelector(".nav-bar");
 
+      menuToggle.addEventListener("click", () => {
+        navBar.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>
