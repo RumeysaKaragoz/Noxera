@@ -1,16 +1,5 @@
-/* GOOGLE FONT */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 body {
-    font-family: 'Inter', sans-serif;
-    min-height: 100vh;
     background: radial-gradient(
         circle at top,
         #1a1f3c 0%,
@@ -18,15 +7,13 @@ body {
     );
     color: #ffffff;
 }
-
 /* MAIN WRAPPER */
 .main-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 80px 20px 40px;
 }
-
-/* HEADER */
+/* container HEADER */
 .page-header {
     text-align: center;
     margin-bottom: 70px;
@@ -207,13 +194,108 @@ body {
     text-decoration: underline;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .page-header h1 {
-        font-size: 2.2rem;
-    }
+/*Light mode*/
+body.light {
+   background: linear-gradient(to bottom, #b6dcff, #eaf6ff);
+  color: #0f172a;
+}
 
-    .amount {
-        font-size: 2.6rem;
-    }
+/* container Header */
+body.light .page-header h1 {
+  color: #0f172a;
+}
+
+body.light .page-header p {
+  color: #475569;
+}
+
+/* Card genel */
+body.light .card {
+  background: #eaf6ff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* Popüler kart */
+body.light .card.popular {
+  border: 2px solid #130acd;
+}
+
+/* Badge */
+body.light .badge {
+  background: linear-gradient(135deg, #130acd, #4159bb);
+  color: #ffffff;
+}
+
+/* Başlık */
+body.light .card-header h3 {
+  color: #0f172a;
+}
+
+/* Fiyat */
+body.light .price-box {
+  color: #0f172a;
+}
+
+body.light .price-box .currency,
+body.light .price-box .period {
+  color: #64748b;
+}
+
+/* Liste */
+body.light .card-body ul li {
+  color: #334155;
+}
+
+/* Disabled özellik */
+body.light .card-body ul li.disabled {
+  color: #94a3b8;
+  text-decoration: line-through;
+}
+
+/* Buton */
+body.light .btn {
+  background: #0f172a;
+  color: #ffffff;
+}
+
+body.light .btn:hover {
+  background: #130acd;
+}
+
+/* Primary buton */
+body.light .btn-primary {
+  background: linear-gradient(135deg, #130acd, #4159bb);
+  color: #ffffff;
+}
+
+body.light .btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* Geri link */
+body.light .back-link a {
+  color: #0f172a;
+}
+
+body.light .back-link a:hover {
+  text-decoration: underline;
+}
+
+body.light .price-card h3 {
+  color: #0f172a;
+}
+
+body.light .price {
+  color: #4f46e5; /* fiyat vurgusu */
+}
+
+body.light .price-card ul li {
+  color: #475569;
+}
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
 }
