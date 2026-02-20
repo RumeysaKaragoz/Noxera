@@ -1,22 +1,111 @@
-/*Font roboto levba*/
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"); /*varasayılan reset işlemi*/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-} 
-/*body stil ayarları*/
-body {
-  min-height: 100vh;
-  font-family: "Roboto", sans-serif;
-  background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
-  overflow-x: hidden;
-} 
+/*Arka plan bulutlar*/
+.sky {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+.cloud {
+  position: relative;
+  animation: floatCloud 25s linear infinite;
+  background: white;
+  border-radius: 50%;
+  box-shadow: white 65px -15px 0 -4px, white 25px -25px, white 30px 10px, white 60px 15px 0 -10px, white 85px 5px 0 -5px;
+  height: 50px;
+  width: 50px;
+  margin: auto;
+}
+
+
+.cloud:after {
+  animation: cloud_shadow 5s ease-in-out infinite;
+  background: black;
+  border-radius: 50%;
+  content: '';
+  height: 15px;
+  width: 120px;
+  opacity: 0.2;
+  position: absolute;
+  bottom: -50px;
+}
+.cloud.c1 {
+  top: 12%;
+  left: -20%;
+  animation-duration: 55s;
+  transform: scale(1.2);
+}
+
+.cloud.c2 {
+  top: 28%;
+  left: -40%;
+  animation-duration: 42s;
+  transform: scale(0.9);
+}
+
+.cloud.c3 {
+  top: 45%;
+  left: -30%;
+  animation-duration: 65s;
+  transform: scale(1.4);
+  opacity: 0.75;
+}
+
+.cloud.c4 {
+  top: 18%;
+  left: -60%;
+  animation-duration: 38s;
+  transform: scale(0.7);
+}
+
+.cloud.c5 {
+  top: 60%;
+  left: -50%;
+  animation-duration: 48s;
+  transform: scale(1);
+}
+
+.cloud.c6 {
+  top: 75%;
+  left: -70%;
+  animation-duration: 72s;
+  transform: scale(1.6);
+  opacity: 0.6;
+}
+
+@keyframes floatCloud {
+  from {
+    transform: translateX(0) scale(var(--scale, 1));
+  }
+  to {
+    transform: translateX(140vw) scale(var(--scale, 1));
+  }
+}
+
+@keyframes cloud_shadow {
+  50% {
+    transform: translateY(0px) scale(.7);
+    opacity: .05;
+  }
+}
+
+body:not(.light) .sky {
+  display: none;
+}
 /*Arka plan yıldız kısmı*/
+body.light .stars,
+body.light .shooting-star {
+  display: none;
+}
 .stars {
   width: 1px;
   height: 1px;
   position: absolute;
+  inset: 0;
   background: white;
   box-shadow:
     2vw 5vh 2px white,
@@ -98,7 +187,7 @@ body {
     transform: translateX(120vw) translateY(50vh) rotate(25deg);
     opacity: 0;
   }
-} 
+}
 /* Additional twinkling stars with different animation timing */
 .stars::after {
   content: "";
@@ -132,60 +221,23 @@ body {
 .stars,
 .shooting-star {
   pointer-events: none;
-} 
+}
 
-/*header kısmı*/
-.nav-bar {
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center;
-  padding: 20px 60px;
-  background: linear-gradient(135deg, #0b0b2b 0%, #090a0d 100%);
-}
-.menu-toggle {
-  display: none;
-  font-size: 28px;
-  color: #fff;
-  cursor: pointer;
-}
-.logo {
-  font-size: 28px;
-  color: #2d3748;
-  margin-bottom: 8px;
-  font-weight: 700;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.nav-links {
-  display: flex; 
-  gap: 30px;
-}
-.nav-links a {
-  color: #fff;
-  padding: 14px 32px;
-  border-radius: 20px;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-  text-decoration: none;
-}
-.nav-links a:hover {
-  border: 1px solid #6c5ce7;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(111, 124, 255, 0.4);
-} 
 
 /*hero kısmı*/
 .hero {
+  position: relative;
+  overflow: hidden;
   min-height: 100vh;
   display: flex;
   color: #fff;
-  padding: 80 60px;
+  padding: 80px 60px;
   gap: 50px;
 }
+
 .hero-content {
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -196,6 +248,7 @@ body {
   color: #fff;
   position: relative;
   background: transparent;
+  z-index: 2;
 }
 .hero h1 {
   color: #f9fafb;
@@ -227,14 +280,15 @@ body {
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
-animation: glowPulse 5s ease-in-out infinite;
+  animation: glowPulse 5s ease-in-out infinite;
 }
 @keyframes glowPulse {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(111,124,255,0.25);
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(111, 124, 255, 0.25);
   }
   50% {
-    box-shadow: 0 0 35px rgba(143,107,255,0.5);
+    box-shadow: 0 0 35px rgba(143, 107, 255, 0.5);
   }
 }
 
@@ -255,8 +309,32 @@ animation: glowPulse 5s ease-in-out infinite;
 .btnsec:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 30px rgba(111, 124, 255, 0.4);
-} 
+}
+/*light version*/
+body.light .btnsec {
+  text-decoration: none;
+  border: 1.5px solid #4facfe;
+  color: #1e3a5f;
+  background: rgba(255, 255, 255, 0.7);
 
+  padding: 14px 32px;
+  border-radius: 20px;
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    color 0.25s ease;
+}
+body.light .btnsec:hover {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: #ffffff;
+
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(79, 172, 254, 0.4);
+}
 /*hizmetler bölümü */
 .services * {
   position: relative;
@@ -267,24 +345,24 @@ animation: glowPulse 5s ease-in-out infinite;
   padding: 120px 8%;
   position: relative;
   background: linear-gradient(
-  to bottom,
-  rgba(255, 210, 170, 0) 0%,
-  rgba(255, 190, 140, 0.25) 20%,
-  rgba(255, 150, 110, 0.55) 40%,
-  rgba(220, 110, 150, 0.75) 60%,
-  rgba(120, 90, 180, 0.9) 80%,
-  rgba(40, 50, 120, 1) 100%
-);
+    to bottom,
+    rgba(255, 210, 170, 0) 0%,
+    rgba(255, 190, 140, 0.25) 20%,
+    rgba(255, 150, 110, 0.55) 40%,
+    rgba(220, 110, 150, 0.75) 60%,
+    rgba(120, 90, 180, 0.9) 80%,
+    rgba(40, 50, 120, 1) 100%
+  );
 }
 /*baslık*/
-.servis-title{
+.servis-title {
   max-width: 720px;
   margin: 0 auto 80px;
   text-align: center;
   position: relative;
 }
 .servis-title::after {
-   content: "";
+  content: "";
   display: block;
   width: 80px;
   height: 2px;
@@ -299,6 +377,7 @@ animation: glowPulse 5s ease-in-out infinite;
   color: #f9fafb;
   margin-bottom: 16px;
   background: linear-gradient(135deg, #ffffff, #c7d2fe);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -320,8 +399,10 @@ animation: glowPulse 5s ease-in-out infinite;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 18px;
   padding: 40px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-   box-shadow:
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+  box-shadow:
     0 10px 30px rgba(0, 0, 0, 0.25),
     inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
@@ -353,18 +434,16 @@ animation: glowPulse 5s ease-in-out infinite;
 .hizmet ul li {
   margin-bottom: 12px;
   font-size: 0.95rem;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255, 255, 255, 0.85);
   line-height: 1.6;
   opacity: 0.85;
-
 }
 
 .hizmet ul li::before {
   content: "•";
   margin-right: 8px;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255, 255, 255, 0.4);
 }
-
 
 .teklif {
   text-align: center;
@@ -373,12 +452,11 @@ animation: glowPulse 5s ease-in-out infinite;
 
 .not {
   font-size: 1.25rem;
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 255, 255, 0.9);
   margin-bottom: 40px;
   font-weight: 300;
   letter-spacing: 1px;
-  text-shadow: 0 3px 12px rgba(0,0,0,0.7);
-
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.7);
 }
 
 .teklif-btn {
@@ -393,7 +471,9 @@ animation: glowPulse 5s ease-in-out infinite;
   letter-spacing: 2px;
   text-transform: uppercase;
   cursor: pointer;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
 .teklif-btn:hover {
@@ -405,20 +485,19 @@ animation: glowPulse 5s ease-in-out infinite;
   border-color: rgba(255, 210, 170, 1);
 }
 
- 
 /* FOOTER */
 .footer {
   text-align: center;
   padding: 20px;
   font-size: 14px;
-} 
+}
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .hero {
-    flex-direction: column; 
+    flex-direction: column;
   }
   .service-grid {
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 600px) {
@@ -463,33 +542,13 @@ animation: glowPulse 5s ease-in-out infinite;
   .hero p {
     font-size: 1rem;
   }
+  .cloud.c6 {
+    display: none;
+  }
 }
 @media (max-width: 800px) {
-  .menu-toggle {
-    display: block;
-  }
-  .nav-bar {
-    position: relative;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 20px;
-  }
-  .nav-links {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    background: linear-gradient(135deg, #0b0b2b, #090a0d);
-    padding: 20px 0;
-    z-index: 999;
-  }
-  .nav-bar.active .nav-links {
-    display: flex;
-  }
-  .nav-bar > .btnpri {
+  .cloud.c5,
+  .cloud.c6 {
     display: none;
   }
 }
