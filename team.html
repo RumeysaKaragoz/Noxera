@@ -4,22 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ekibimiz | NOXERA</title>
-    <link rel="icon" href="image/logo.png">
+    <link rel="icon" href="image/logo.png" />
+    <link rel="stylesheet" href="common.css" />
     <link rel="stylesheet" href="team.css" />
   </head>
   <body>
     <header class="nav-bar">
-      <div class="menu-toggle">☰</div>
-      <div class="logo">NOXERA</div>
+      <div class="nav-left">
+        <div class="menu-toggle">☰</div>
+        <div class="logo">NOXERA</div>
+      </div>
 
       <nav class="nav-links">
         <a href="index.html">Anasayfa</a>
         <a href="team.html">Ekibimiz</a>
-        <!--eklendi ve -->
-        <a href="index.html#hizmetler">Hizmetler</a>
-        <a href="communication.html">iletişim</a>
+        <a href="index.html#hizmetlerr">Hizmetler</a>
+        <a href="communication.html">İletişim</a>
       </nav>
-      <a href="offer.html"  class="btnpri">Teklif Al</a>
+
+      <div class="nav-right">
+        <button
+          id="themeToggle"
+          class="theme-toggle"
+          aria-label="Tema Değiştir"
+        >
+          <span class="icon moon"></span>
+          <span class="icon sun"></span>
+        </button>
+        <a href="offer.html" class="btnpri">Teklif Al</a>
+      </div>
     </header>
     <!--uzman kadro bölümü-->
     <section class="team">
@@ -122,22 +135,6 @@
       </footer>
     </section>
     <!--Responsive-->
-    <script>
-      document.querySelectorAll(".team-card").forEach((card) => {
-        card.addEventListener("click", () => {
-          card.classList.toggle("active");
-        });
-      });
-
-      const menuToggle = document.querySelector(".menu-toggle");
-      const navBar = document.querySelector(".nav-bar");
-
-      menuToggle.addEventListener("click", () => {
-        navBar.classList.toggle("active");
-        document.body.style.overflow = navBar.classList.contains("active")
-          ? "hidden"
-          : "";
-      });
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
