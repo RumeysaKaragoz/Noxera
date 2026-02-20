@@ -3,7 +3,7 @@ const resultBox = document.getElementById("offerResult");
 
 async function getUsdRate() {
   try {
-    const response = await fetch("https://api.exchangerate-api.com/v4/latest/USD");
+    const response = await fetch("https://open.er-api.com/v6/latest/USD");
     const data = await response.json();
     return data.rates.TRY;
   } catch (error) {
