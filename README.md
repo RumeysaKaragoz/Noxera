@@ -45,4 +45,4 @@ Koyu (dark) ana tema marka kimliğini yansıtırken, gün batımı (sunset) tema
 
 ---
 
-© 2024 NOXERA. Tüm hakları saklıdır.
+© 2026 NOXERA. Tüm hakları saklıdır.
