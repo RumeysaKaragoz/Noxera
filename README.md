@@ -44,13 +44,5 @@ Koyu (dark) ana tema marka kimliğini yansıtırken, gün batımı (sunset) tema
 - Google Fonts
 
 ---
-## 💡 Proje Amacı
-
-Bu proje;
-- UI/UX tasarım becerilerini geliştirmek
-- Tema geçişleri ve görsel hiyerarşi pratiği yapmak
-- Kişisel portföyde sergilenebilecek profesyonel bir landing page oluşturmak
-amacıyla geliştirilmiştir.
----
 
 © 2024 NOXERA. Tüm hakları saklıdır.
